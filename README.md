@@ -12,7 +12,9 @@ There are endless type charts available online, but at my age they were hard to 
 
 ## Design Notes
 
-I used the extremely detailed [Pokémon Database](https://pokemondb.net/) for the underlying type matchup data.  You'll find the PowerShell code to scrape their type chart into a simple JSON file in ```Get-TypeChart.ps1.```
+I used the extremely detailed [Pokémon Database](https://pokemondb.net/) for the underlying type matchup data.  You'll find the PowerShell code to scrape their type chart into a simple JSON file in ```Get-PokemonDbTypeChart.ps1```.  
+
+Belatedly, I checked their FAQ and see they discourage remixing their data. As such, I have reimplmented this step with ```Get-VeekunTypeChart.ps1``` to produce the same JSON file from [Veekun](https://github.com/veekun/pokedex/)'s MIT licensed CSV files.
 
 I manually extracted the SVG outlines from Elginive's [lovely recreations.](https://github.com/Elginive/pokemon-type-icons)  I split each type's icon out into a separate file and wrapped it in transforms to place it back into a 0 0 64 64 viewbox.  These files might be useful for other projects, but all creative credit goes to Elginive.  I didn't touch the path data at all.
 
