@@ -1,0 +1,211 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: system-ui;
+}
+body { 
+    margin: 3dvw 0; padding: 0;
+    background: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1dvw;
+    overscroll-behavior: contain;
+}
+summary {
+    display: block;
+    list-style: none;
+    cursor: pointer;
+    width: 30dvw; height: 28dvw;
+    border: 0.5dvw solid var(--color);
+    background-color: black;
+    color: var(--color);
+}
+details[open] > summary {
+    background-color: lightgray;
+    background-color: var(--color);
+    color: white;
+}
+summary::before {
+    content: "";
+    display: block;
+    background-image: var(--icon);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18dvw;
+    width: 20dvw; height: 18dvw;
+    margin: 2dvw auto;
+}
+summary::after {
+    content: var(--name);
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 5dvw;
+    margin-top: -2dvw;
+}
+div.details {
+    position: absolute;
+    left: 5dvw;
+    width: 90dvw; height: 84dvw;
+    background: var(--color);
+    border: 1dvw solid black;
+    padding: 1dvw;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+}
+div.details::-webkit-scrollbar {
+    display: none;
+}
+div.scrolldetails {
+    width: 165dvw;
+    display: flex;
+    flex: row nowrap;
+    gap: 1dvw;
+    overscroll-behavior: contain;
+}
+div.top { top: 4dvw; }
+div.bottom { top: 91dvw; }
+div.defending, div.attacking {
+    width: 82.5dvw;
+}
+div.defending::before { content: 'These attacks against ' var(--name) ' Pokémon are:' }
+div.attacking::before { content: var(--name) ' moves against other Pokémon are:' }
+div.defending::before, div.attacking::before {
+    display: block;
+    color: white;
+    font-weight: bold;
+    font-weight: bold;
+    font-size: 3dvw;
+    margin-top: -1dvw;
+    margin-bottom: 1dvw;
+}
+div.strong, div.weak, div.nothing {
+    padding: 1dvw;
+    margin-top: 1dvw;
+}
+div.strong::before { content: "“Super Effective” (double damage)"; }
+div.weak::before { content: "“Not Very Effective” (half damage)";}
+div.nothing::before { content: "“Have No Effect” (no damage)"; }
+div.strong::before, div.weak::before, div.nothing::before {
+    display: block;
+    color: white;
+    margin-top: -1dvw;
+    font-size: 3dvw;
+}
+div.against {
+    display: inline-block;
+    width: 14dvw; height: 14dvw;
+    background-color: black;
+    margin: 2px 0; padding: 0;
+}
+div.against::before {
+    content: "";
+    display: block;
+    background-image: var(--icon);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 9dvw;
+    width: 9dvw; height: 9dvw;
+    margin: 1dvw auto;
+}
+div.against::after {
+    content: var(--name);
+    color: var(--color);
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5dvw;
+    margin-top: -1dvw;
+}
+.normal {
+    --name: 'Normal';
+    --color: #9fa19f;
+    --icon: url(types/normal.svg)
+}
+.fire {
+    --name: 'Fire';
+    --color: #e62829;
+    --icon: url(types/fire.svg)
+}
+.water {
+    --name: 'Water';
+    --color: #2980ef;
+    --icon: url(types/water.svg)
+}
+.electric {
+    --name: 'Electric';
+    --color: #fac000;
+    --icon: url(types/electric.svg)
+}
+.grass {
+    --name: 'Grass';
+    --color: #3fa129;
+    --icon: url(types/grass.svg)
+}
+.ice {
+    --name: 'Ice';
+    --color: #3fd8ff;
+    --icon: url(types/ice.svg)
+}
+.fighting {
+    --name: 'Fighting';
+    --color: #ff8000;
+    --icon: url(types/fighting.svg)
+}
+.poison {
+    --name: 'Poison';
+    --color: #9141cb;
+    --icon: url(types/poison.svg)
+}
+.ground {
+    --name: 'Ground';
+    --color: #915121;
+    --icon: url(types/ground.svg)
+}
+.flying {
+    --name: 'Flying';
+    --color: #81b9ef;
+    --icon: url(types/flying.svg)
+}
+.psychic {
+    --name: 'Psychic';
+    --color: #ef4179;
+    --icon: url(types/psychic.svg)
+}
+.bug {
+    --name: 'Bug';
+    --color: #91a119;
+    --icon: url(types/bug.svg)
+}
+.rock {
+    --name: 'Rock';
+    --color: #afa981;
+    --icon: url(types/rock.svg)
+}
+.ghost {
+    --name: 'Ghost';
+    --color: #704170;
+    --icon: url(types/ghost.svg)
+}
+.dragon {
+    --name: 'Dragon';
+    --color: #5060e1;
+    --icon: url(types/dragon.svg)
+}
+.dark {
+    --name: 'Dark';
+    --color: #50413f;
+    --icon: url(types/dark.svg)
+}
+.steel {
+    --name: 'Steel';
+    --color: #60a1b8;
+    --icon: url(types/steel.svg)
+}
+.fairy {
+    --name: 'Fairy';
+    --color: #ef70ef;
+    --icon: url(types/fairy.svg)
+}

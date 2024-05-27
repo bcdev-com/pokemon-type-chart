@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Gengar's Type Chart</title>
+  <!--
+  Type Chart data thanks to: https://pokemondb.net/type
+  SVG icons thanks to: https://github.com/Elginive/pokemon-type-icons
+  -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>😈</text></svg>">
+  <link rel='stylesheet' href='style.css'>
+</head>
+<body>
+  <details name='type' class='normal'>
+    <summary></summary>
+    <div class='details bottom'>
+      <div class='scrolldetails'>
+        <div class='defending'>
+          <div class='strong'>
+            <div class='fighting against'></div>
+          </div>
+          <div class='nothing'>
+            <div class='ghost against'></div>
+          </div>
+        </div>
+        <div class='attacking'>
+          <div class='weak'>
+            <div class='rock against'></div>
+            <div class='steel against'></div>
+          </div>
+          <div class='nothing'>
+            <div class='ghost against'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+  <details name='type' class='fire'>
+    <summary></summary>
+    <div class='details bottom'>
+      <div class='scrolldetails'>
+        <div class='defending'>
+          <div class='strong'>
+            <div class='water against'></div>
+            <div class='ground against'></div>
+            <div class='rock against'></div>
+          </div>
+          <div class='weak'>
+            <div class='fire against'></div>
+            <div class='grass against'></div>
+            <div class='ice against'></div>
+            <div class='bug against'></div>
+            <div class='steel against'></div>
+            <div class='fairy against'></div>
+          </div>
+        </div>
+        <div class='attacking'>
+          <div class='strong'>
+            <div class='grass against'></div>
+            <div class='ice against'></div>
+            <div class='bug against'></div>
+            <div class='steel against'></div>
+          </div>
+          <div class='weak'>
+            <div class='fire against'></div>
+            <div class='water against'></div>
+            <div class='rock against'></div>
+            <div class='dragon against'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+  <details name='type' class='water'>
+    <summary></summary>
+    <div class='details bottom'>
+      <div class='scrolldetails'>
+        <div class='defending'>
+          <div class='strong'>
+            <div class='electric against'></div>
+            <div class='grass against'></div>
+          </div>
+          <div class='weak'>
+            <div class='fire against'></div>
+            <div class='water against'></div>
+            <div class='ice against'></div>
+            <div class='steel against'></div>
+          </div>
+        </div>
+        <div class='attacking'>
+          <div class='strong'>
+            <div class='fire against'></div>
+            <div class='ground against'></div>
+            <div class='rock against'></div>
+          </div>
+          <div class='weak'>
+            <div class='water against'></div>
+            <div class='grass against'></div>
+            <div class='dragon against'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+  <details name='type' class='electric'>
+    <summary></summary>
+    <div class='details bottom'>
+      <div class='scrolldetails'>
+        <div class='defending'>
+          <div class='strong'>
+            <div class='ground against'></div>
+          </div>
+          <div class='weak'>
+            <div class='electric against'></div>
+            <div class='flying against'></div>
+            <div class='steel against'></div>
+          </div>
+        </div>
+        <div class='attacking'>
+          <div class='strong'>
+            <div class='water against'></div>
+            <div class='flying against'></div>
+          </div>
+          <div class='weak'>
+            <div class='electric against'></div>
+            <div class='grass against'></div>
+            <div class='dragon against'></div>
+          </div>
+          <div class='nothing'>
+            <div class='ground against'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+  <details name='type' class='grass'>
+    <summary></summary>
+    <div class='details bottom'>
+      <div class='scrolldetails'>
+        <div class='defending'>
+          <div class='strong'>
+            <div class='fire against'></div>
+            <div class='ice against'></div>
+            <div class='poison against'></div>
+            <div class='flying against'></div>
+            <div class='bug against'></div>
+          </div>
+          <div class='weak'>
+            <div class='water against'></div>
+            <div class='electric against'></div>
+            <div class='grass against'></div>
+            <div class='ground against'></div>
+          </div>
+        </div>
+        <div class='attacking'>
+          <div class='strong'>
+            <div class='water against'></div>
+            <div class='ground against'></div>
+            <div class='rock against'></div>
+          </div>
+          <div class='weak'>
+            <div class='fire against'></div>
+            <div class='grass against'></div>
+            <div class='poison against'></div>
+            <div class='flying against'></div>
+            <div class='bug against'></div>
+            <div class='dragon against'></div>
+            <div class='steel against'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+  <details name='type' class='ice'>
+    <summary></summary>
+    <div class='details bottom'>
+      <div class='scrolldetails'>
+        <div class='defending'>
+          <div class='strong'>
+            <div class='fire against'></div>
+            <div class='fighting against'></div>
+            <div class='rock against'></div>
+            <div class='steel against'></div>
+          </div>
+          <div class='weak'>
+            <div class='ice against'></div>
+          </div>
+        </div>
+        <div class='attacking'>
+          <div class='strong'>
+            <div class='grass against'></div>
+            <div class='ground against'></div>
+            <div class='flying against'></div>
+            <div class='dragon against'></div>
+          </div>
+          <div class='weak'>
+            <div class='fire against'></div>
+            <div class='water against'></div>
+            <div class='ice against'></div>
+            <div class='steel against'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+  <details name='type' class='fighting'>
+    <summary></summary>
+    <div class='details bottom'>
+      <div class='scrolldetails'>
+        <div class='defending'>
+          <div class='strong'>
+            <div class='flying against'></div>
+            <div class='psychic against'></div>
+            <div class='fairy against'></div>
+          </div>
+          <div class='weak'>
+            <div class='bug against'></div>
+            <div class='rock against'></div>
+            <div class='dark against'></div>
+          </div>
+        </div>
+        <div class='attacking'>
+          <div class='strong'>
+            <div class='normal against'></div>
+            <div class='ice against'></div>
+            <div class='rock against'></div>
+            <div class='dark against'></div>
+            <div class='steel against'></div>
+          </div>
+          <div class='weak'>
+            <div class='poison against'></div>
+            <div class='flying against'></div>
+            <div class='psychic against'></div>
+            <div class='bug against'></div>
+            <div class='fairy against'></div>
+          </div>
+          <div class='nothing'>
+            <div class='ghost against'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+  <details name='type' class='poison'>
+    <summary></summary>
+    <div class='details bottom'>
+      <div class='scrolldetails'>
+        <div class='defending'>
+          <div class='strong'>
+            <div class='ground against'></div>
+            <div class='psychic against'></div>
+          </div>
+          <div class='weak'>
+            <div class='grass against'></div>
+            <div class='fighting against'></div>
+            <div class='poison against'></div>
+            <div class='bug against'></div>
+            <div class='fairy against'></div>
+          </div>
+        </div>
+        <div class='attacking'>
+          <div class='strong'>
+            <div class='grass against'></div>
+            <div class='fairy against'></div>
+          </div>
+          <div class='weak'>
+            <div class='poison against'></div>
+            <div class='ground against'></div>
+            <div class='rock against'></div>
+            <div class='ghost against'></div>
+          </div>
+          <div class='nothing'>
+            <div class='steel against'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+  <details name='type' class='ground'>
+    <summary></summary>
+    <div class='details bottom'>
+      <div class='scrolldetails'>
+        <div class='defending'>
+          <div class='strong'>
+            <div class='water against'></div>
+            <div class='grass against'></div>
+            <div class='ice against'></div>
+          </div>
+          <div class='weak'>
+            <div class='poison against'></div>
+            <div class='rock against'></div>
+          </div>
+          <div class='nothing'>
+            <div class='electric against'></div>
+          </div>
+        </div>
+        <div class='attacking'>
+          <div class='strong'>
+            <div class='fire against'></div>
+            <div class='electric against'></div>
+            <div class='poison against'></div>
+            <div class='rock against'></div>
+            <div class='steel against'></div>
+          </div>
+          <div class='weak'>
+            <div class='grass against'></div>
+            <div class='bug against'></div>
+          </div>
+          <div class='nothing'>
+            <div class='flying against'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+  <details name='type' class='flying'>
+    <summary></summary>
+    <div class='details top'>
+      <div class='scrolldetails'>
+        <div class='defending'>
+          <div class='strong'>
+            <div class='electric against'></div>
+            <div class='ice against'></div>
+            <div class='rock against'></div>
+          </div>
+          <div class='weak'>
+            <div class='grass against'></div>
+            <div class='fighting against'></div>
+            <div class='bug against'></div>
+          </div>
+          <div class='nothing'>
+            <div class='ground against'></div>
+          </div>
+        </div>
+        <div class='attacking'>
+          <div class='strong'>
+            <div class='grass against'></div>
+            <div class='fighting against'></div>
+            <div class='bug against'></div>
+          </div>
+          <div class='weak'>
+            <div class='electric against'></div>
+            <div class='rock against'></div>
+            <div class='steel against'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+  <details name='type' class='psychic'>
+    <summary></summary>
+    <div class='details top'>
+      <div class='scrolldetails'>
+        <div class='defending'>
+          <div class='strong'>
+            <div class='bug against'></div>
+            <div class='ghost against'></div>
+            <div class='dark against'></div>
+          </div>
+          <div class='weak'>
+            <div class='fighting against'></div>
+            <div class='psychic against'></div>
+          </div>
+        </div>
+        <div class='attacking'>
+          <div class='strong'>
+            <div class='fighting against'></div>
+            <div class='poison against'></div>
+          </div>
+          <div class='weak'>
+            <div class='psychic against'></div>
+            <div class='steel against'></div>
+          </div>
+          <div class='nothing'>
+            <div class='dark against'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+  <details name='type' class='bug'>
+    <summary></summary>
+    <div class='details top'>
+      <div class='scrolldetails'>
+        <div class='defending'>
+          <div class='strong'>
+            <div class='fire against'></div>
+            <div class='flying against'></div>
+            <div class='rock against'></div>
+          </div>
+          <div class='weak'>
+            <div class='grass against'></div>
+            <div class='fighting against'></div>
+            <div class='ground against'></div>
+          </div>
+        </div>
+        <div class='attacking'>
+          <div class='strong'>
+            <div class='grass against'></div>
+            <div class='psychic against'></div>
+            <div class='dark against'></div>
+          </div>
+          <div class='weak'>
+            <div class='fire against'></div>
+            <div class='fighting against'></div>
+            <div class='poison against'></div>
+            <div class='flying against'></div>
+            <div class='ghost against'></div>
+            <div class='steel against'></div>
+            <div class='fairy against'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+  <details name='type' class='rock'>
+    <summary></summary>
+    <div class='details top'>
+      <div class='scrolldetails'>
+        <div class='defending'>
+          <div class='strong'>
+            <div class='water against'></div>
+            <div class='grass against'></div>
+            <div class='fighting against'></div>
+            <div class='ground against'></div>
+            <div class='steel against'></div>
+          </div>
+          <div class='weak'>
+            <div class='normal against'></div>
+            <div class='fire against'></div>
+            <div class='poison against'></div>
+            <div class='flying against'></div>
+          </div>
+        </div>
+        <div class='attacking'>
+          <div class='strong'>
+            <div class='fire against'></div>
+            <div class='ice against'></div>
+            <div class='flying against'></div>
+            <div class='bug against'></div>
+          </div>
+          <div class='weak'>
+            <div class='fighting against'></div>
+            <div class='ground against'></div>
+            <div class='steel against'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+  <details name='type' class='ghost'>
+    <summary></summary>
+    <div class='details top'>
+      <div class='scrolldetails'>
+        <div class='defending'>
+          <div class='strong'>
+            <div class='ghost against'></div>
+            <div class='dark against'></div>
+          </div>
+          <div class='weak'>
+            <div class='poison against'></div>
+            <div class='bug against'></div>
+          </div>
+          <div class='nothing'>
+            <div class='normal against'></div>
+            <div class='fighting against'></div>
+          </div>
+        </div>
+        <div class='attacking'>
+          <div class='strong'>
+            <div class='psychic against'></div>
+            <div class='ghost against'></div>
+          </div>
+          <div class='weak'>
+            <div class='dark against'></div>
+          </div>
+          <div class='nothing'>
+            <div class='normal against'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+  <details name='type' class='dragon'>
+    <summary></summary>
+    <div class='details top'>
+      <div class='scrolldetails'>
+        <div class='defending'>
+          <div class='strong'>
+            <div class='ice against'></div>
+            <div class='dragon against'></div>
+            <div class='fairy against'></div>
+          </div>
+          <div class='weak'>
+            <div class='fire against'></div>
+            <div class='water against'></div>
+            <div class='electric against'></div>
+            <div class='grass against'></div>
+          </div>
+        </div>
+        <div class='attacking'>
+          <div class='strong'>
+            <div class='dragon against'></div>
+          </div>
+          <div class='weak'>
+            <div class='steel against'></div>
+          </div>
+          <div class='nothing'>
+            <div class='fairy against'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+  <details name='type' class='dark'>
+    <summary></summary>
+    <div class='details top'>
+      <div class='scrolldetails'>
+        <div class='defending'>
+          <div class='strong'>
+            <div class='fighting against'></div>
+            <div class='bug against'></div>
+            <div class='fairy against'></div>
+          </div>
+          <div class='weak'>
+            <div class='ghost against'></div>
+            <div class='dark against'></div>
+          </div>
+          <div class='nothing'>
+            <div class='psychic against'></div>
+          </div>
+        </div>
+        <div class='attacking'>
+          <div class='strong'>
+            <div class='psychic against'></div>
+            <div class='ghost against'></div>
+          </div>
+          <div class='weak'>
+            <div class='fighting against'></div>
+            <div class='dark against'></div>
+            <div class='fairy against'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+  <details name='type' class='steel'>
+    <summary></summary>
+    <div class='details top'>
+      <div class='scrolldetails'>
+        <div class='defending'>
+          <div class='strong'>
+            <div class='fire against'></div>
+            <div class='fighting against'></div>
+            <div class='ground against'></div>
+          </div>
+          <div class='weak'>
+            <div class='normal against'></div>
+            <div class='grass against'></div>
+            <div class='ice against'></div>
+            <div class='flying against'></div>
+            <div class='psychic against'></div>
+            <div class='bug against'></div>
+            <div class='rock against'></div>
+            <div class='dragon against'></div>
+            <div class='steel against'></div>
+            <div class='fairy against'></div>
+          </div>
+          <div class='nothing'>
+            <div class='poison against'></div>
+          </div>
+        </div>
+        <div class='attacking'>
+          <div class='strong'>
+            <div class='ice against'></div>
+            <div class='rock against'></div>
+            <div class='fairy against'></div>
+          </div>
+          <div class='weak'>
+            <div class='fire against'></div>
+            <div class='water against'></div>
+            <div class='electric against'></div>
+            <div class='steel against'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+  <details name='type' class='fairy'>
+    <summary></summary>
+    <div class='details top'>
+      <div class='scrolldetails'>
+        <div class='defending'>
+          <div class='strong'>
+            <div class='poison against'></div>
+            <div class='steel against'></div>
+          </div>
+          <div class='weak'>
+            <div class='fighting against'></div>
+            <div class='bug against'></div>
+            <div class='dark against'></div>
+          </div>
+          <div class='nothing'>
+            <div class='dragon against'></div>
+          </div>
+        </div>
+        <div class='attacking'>
+          <div class='strong'>
+            <div class='fighting against'></div>
+            <div class='dragon against'></div>
+            <div class='dark against'></div>
+          </div>
+          <div class='weak'>
+            <div class='fire against'></div>
+            <div class='poison against'></div>
+            <div class='steel against'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+</body>
+</html>
