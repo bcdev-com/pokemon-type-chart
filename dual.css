@@ -75,25 +75,19 @@ a.type::after {
 }
 a.reset {
     position: absolute;
+    display: block;
     top: 1dvw; right: 1dvw;
-    font-size: 4dvw;
-    text-decoration: none;
-    width: 1.5em; height: 1.5em;
-    background: black;
-    color: white;
-    display: block;
+    width: 6em; height: 6em;
+    background-image: url("data:image/svg+xml,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='black'/><path d='M 12 12 L 52 52 M 52 12 L 12 52' stroke='red' stroke-width='8' stroke-linecap='round'/></svg>")
 }
-a.reset::before {
-    display: block;
-    content: '❌';
-    text-align: center;
+div.defending, div.attacking {
+    filter: drop-shadow(0 0 1px black);
 }
 div.defending::before { content: 'Against ' var(--type) ' Pokémon, these attacks are:' }
 div.attacking::before { content: var(--type) ' moves against other Pokémon are:' }
 div.defending::before, div.attacking::before {
     display: block;
     color: white;
-    font-weight: bold;
     font-weight: bold;
     font-size: 3dvw;
     margin-bottom: 2dvw;

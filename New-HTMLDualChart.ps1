@@ -52,7 +52,6 @@ $chart.Keys | ForEach-Object {
         $only = $_ -eq $type ? ' only' : ''
         "  <a class='type $_$only' href='#$type-$_'></a>"
         "  <aside id='$type-$_' class='$_$only'>"
-        "    <a class='reset' href='#'></a>"
         $attacks = $chart[$type]
         if ($type -eq $_) {
             "    <div class='defending'>"
@@ -75,6 +74,7 @@ $chart.Keys | ForEach-Object {
             Write-Against 'x0' @($attacks.Keys | Where-Object { ($attacks[$_] * $second[$_]) -eq 0 })
             "    </div>"
         }
+        "    <a class='reset' href='#'></a>"
         "  </aside>"
     }
     "</section>"
