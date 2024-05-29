@@ -35,14 +35,14 @@ if ($SingleFile) {
 function Write-Against($strength, $types) {
     if ($types.Length -gt 0) {
         "      <div class='$strength'>"
-        $types | ForEach-Object { "        <span class='$_'></span>" }
+        $types | ForEach-Object { "        <a class='$_ move' href='#$_-$_'></a>" }
         "      </div>"
     }
 }
 
 $chart = Get-Content -Raw $PSScriptRoot\TypeChart.json | ConvertFrom-Json -AsHashtable
 "<main>"
-$chart.Keys | ForEach-Object { "  <a class='type $_' href='#$_'></a>" }
+$chart.Keys | ForEach-Object { "  <a class='$_ type' href='#$_'></a>" }
 "</main>"
 
 $chart.Keys | ForEach-Object {
@@ -50,7 +50,7 @@ $chart.Keys | ForEach-Object {
     "<section id='$type' class='$type'>"
     $chart.Keys | ForEach-Object {
         $only = $_ -eq $type ? ' only' : ''
-        "  <a class='type $_$only' href='#$type-$_'></a>"
+        "  <a class='$_$only type' href='#$type-$_'></a>"
         "  <aside id='$type-$_' class='$_$only'>"
         $attacks = $chart[$type]
         if ($type -eq $_) {
