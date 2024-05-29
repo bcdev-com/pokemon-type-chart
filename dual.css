@@ -1,0 +1,235 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: system-ui;
+}
+body { 
+    margin: 0; padding: 0;
+    background: black;
+    overscroll-behavior: contain;
+}
+main, section, aside {
+    position: absolute;
+    top: 0; left: 0;
+}
+main, section {
+    padding-top: 3dvw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1dvw;
+}
+section {
+    display: none;
+    --first-name: var(--name);
+    --first-color: var(--color);
+}
+section:target, section:has(aside:target) {
+    display: flex;
+}
+aside {
+    display: none;
+    width: 100dvw;
+    height: 100dvh;
+    border: 3dvw solid black;
+    padding: 1dvw;
+    background: linear-gradient(to bottom right, var(--first-color), var(--color));
+    color: white;
+    --type: var(--first-name) '/' var(--name)  
+}
+aside.only {
+    --type: var(--first-name)
+}
+aside:target {
+    display: block;
+}
+a.type {
+    display: block;
+    text-decoration: none;
+    width: 30dvw; height: 28dvw;
+    border: 0.5dvw solid var(--color);
+    background-color: black;
+    color: var(--color);
+}
+a.type.only {
+    background-color: var(--color);
+    color: white;
+}
+a.type::before {
+    content: "";
+    display: block;
+    background-image: var(--icon);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18dvw;
+    width: 20dvw; height: 18dvw;
+    margin: 2dvw auto;
+}
+a.type::after {
+    content: var(--name);
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 5dvw;
+    margin-top: -2dvw;
+}
+a.reset {
+    position: absolute;
+    top: 1dvw; right: 1dvw;
+    font-size: 4dvw;
+    text-decoration: none;
+    width: 1.5em; height: 1.5em;
+    background: black;
+    color: white;
+    display: block;
+}
+a.reset::before {
+    display: block;
+    content: '❌';
+    text-align: center;
+}
+div.defending::before { content: 'Against ' var(--type) ' Pokémon, these attacks are:' }
+div.attacking::before { content: var(--type) ' moves against other Pokémon are:' }
+div.defending::before, div.attacking::before {
+    display: block;
+    color: white;
+    font-weight: bold;
+    font-weight: bold;
+    font-size: 3dvw;
+    margin-bottom: 2dvw;
+}
+div.attacking {
+    margin-top: 3dvw;
+    padding-top: 1dvw;
+    border-top: 0.5dvw solid white;
+}
+div.attacking>div, div.defending>div {
+    padding: 1dvw;
+    margin-top: 1dvw;
+}
+div.x400::before { content: "“Super Effective” (quadruple damage)"; }
+div.x200::before { content: "“Super Effective” (double damage)"; }
+div.x50::before { content: "“Not Very Effective” (half damage)";}
+div.x25::before { content: "“Not Very Effective” (quarter damage)";}
+div.x0::before { content: "“Have No Effect” (no damage)"; }
+div.x400::before, div.x200::before, div.x50::before, div.x25::before, div.x0::before {
+    display: block;
+    color: white;
+    margin-top: -1dvw;
+    font-size: 3dvw;
+}
+span {
+    display: inline-block;
+    width: 14dvw; height: 14dvw;
+    background-color: black;
+    margin: 2px 0; padding: 0;
+}
+span::before {
+    content: "";
+    display: block;
+    background-image: var(--icon);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 9dvw;
+    width: 9dvw; height: 9dvw;
+    margin: 1dvw auto;
+}
+span::after {
+    content: var(--name);
+    color: var(--color);
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5dvw;
+    margin-top: -1dvw;
+}
+.normal {
+    --name: 'Normal';
+    --color: #9fa19f;
+    --icon: url(types/normal.svg)
+}
+.fire {
+    --name: 'Fire';
+    --color: #e62829;
+    --icon: url(types/fire.svg)
+}
+.water {
+    --name: 'Water';
+    --color: #2980ef;
+    --icon: url(types/water.svg)
+}
+.electric {
+    --name: 'Electric';
+    --color: #fac000;
+    --icon: url(types/electric.svg)
+}
+.grass {
+    --name: 'Grass';
+    --color: #3fa129;
+    --icon: url(types/grass.svg)
+}
+.ice {
+    --name: 'Ice';
+    --color: #3fd8ff;
+    --icon: url(types/ice.svg)
+}
+.fighting {
+    --name: 'Fighting';
+    --color: #ff8000;
+    --icon: url(types/fighting.svg)
+}
+.poison {
+    --name: 'Poison';
+    --color: #9141cb;
+    --icon: url(types/poison.svg)
+}
+.ground {
+    --name: 'Ground';
+    --color: #915121;
+    --icon: url(types/ground.svg)
+}
+.flying {
+    --name: 'Flying';
+    --color: #81b9ef;
+    --icon: url(types/flying.svg)
+}
+.psychic {
+    --name: 'Psychic';
+    --color: #ef4179;
+    --icon: url(types/psychic.svg)
+}
+.bug {
+    --name: 'Bug';
+    --color: #91a119;
+    --icon: url(types/bug.svg)
+}
+.rock {
+    --name: 'Rock';
+    --color: #afa981;
+    --icon: url(types/rock.svg)
+}
+.ghost {
+    --name: 'Ghost';
+    --color: #704170;
+    --icon: url(types/ghost.svg)
+}
+.dragon {
+    --name: 'Dragon';
+    --color: #5060e1;
+    --icon: url(types/dragon.svg)
+}
+.dark {
+    --name: 'Dark';
+    --color: #50413f;
+    --icon: url(types/dark.svg)
+}
+.steel {
+    --name: 'Steel';
+    --color: #60a1b8;
+    --icon: url(types/steel.svg)
+}
+.fairy {
+    --name: 'Fairy';
+    --color: #ef70ef;
+    --icon: url(types/fairy.svg)
+}
